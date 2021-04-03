@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <title></title>
+ <link rel="stylesheet" href="{{ url_for('static', filename='home.css') }}">
+ 
+</head>
+<body>
+<h1> 
+	<p align="center"> Projet innovant 1</p>
+</h1>
+<h2> 
+	<p align="center"> Utilisation de l'algorithme des Kmeans sur les données iris-data </p>
+</h2>
+
+<p align="center">
+	<a href="{{ url_for('iris_data_page') }}"> 
+		<button class=bleu style="height:75px;width:150px"> See iris data </button>
+	</a>
+	<a href="{{ url_for('kmeans_output_page') }}"> 
+		<button class=grey style="height:75px;width:150px"> Load Kmeans ouput </button>
+	</a>
+</p>
+
+</body>
+</html>

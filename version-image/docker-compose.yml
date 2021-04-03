@@ -1,0 +1,36 @@
+version: "3"
+        
+services:
+    db:
+        image: ied-paris8/postgres-image
+        container_name: db
+        ports:
+            - "5432:5432"
+        environment:
+            - "POSTGRES_USER=kmeans_project_user"
+            - "POSTGRES_PASSWORD=kmeans_project_user_password"
+            - "POSTGRES_DB=database"
+        volumes:
+            - "../kmeans:/mnt/data"
+        networks:
+            - public_net
+    algo-container:
+        image: ied-paris8/algo-kmeans-image   
+        container_name: algo-container
+        depends_on:
+            - db
+        networks:
+            - public_net
+    ui-container:
+        image: ied-paris8/flask-app-image  
+        container_name: ui-container
+        ports:
+            - "5000:5000"
+        depends_on:
+            - algo-container
+        networks:
+            - public_net
+
+networks:
+    public_net:
+        driver: bridge
