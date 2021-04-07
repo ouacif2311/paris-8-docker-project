@@ -13,6 +13,7 @@ def connect(database="database",user="kmeans_project_user",password="kmeans_proj
     return mycursor
 
 app = Flask(__name__)
+app.config["CACHE_TYPE"] = "null"
 
 @app.route('/')
 def index():

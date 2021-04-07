@@ -1,0 +1,40 @@
+.picture_1 {
+    width: 85px;
+    height: 70px;
+    float: left;
+}
+
+.picture_2 {
+    width: 100px;
+    height: 90px;
+    float: right;
+}
+
+.body {
+    /* background-color: #ebebeb; */
+    width: 99%;
+    height: 99%;
+}
+
+.main {
+    /* background-color: #EBEBEB; */
+    width: 100%;
+    height: 100%;
+}
+
+.top {
+    /* background-color: #ABBAEA; */
+    float: top;
+    width: 100%;
+    height: 20%;
+}
+
+.middle {
+    /* background-color: #FBD603; */
+    float: bottom;
+    width: 100%;
+    height: 70%;
+    padding-top: 3%;
+}
+
+
